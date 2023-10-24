@@ -30,12 +30,12 @@ dispatchCartAction({type : 'ADD' , item:item})  //forwarding or dispathing
 }
 
 const removeItemFromCartHandler =(id) =>{
-    
+    dispatchCartAction({type:'REMOVE' , id:id})
 }
 
 const cartContext = {
     items:cartState.items,
-    total:cartState.totalAmount,
+    totalAmount:cartState.totalAmount,
     addItem:addItemToCartHandler,
     removeItem:removeItemFromCartHandler
 }
